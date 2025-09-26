@@ -18,5 +18,9 @@ module.exports = defineConfig({
       return config;
     },
     baseUrl: 'https://aps-rejanglebong.skwn.dev/dev',
+    video: true,
+    screenshotOnRunFailure: true,
+    screenshotsFolder: 'cypress/screenshots', 
+    videosFolder: 'cypress/videos'
   },
 });
