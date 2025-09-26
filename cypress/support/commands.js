@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+Cypress.Commands.add('Login', () => {
+    cy.fixture('account.json').then((f) => {
+        const { username, password } = f.account;
+        cy.on('uncaught:exception', () => false);
+        cy.visit('/');
+        cy.get('#username').type(username);
+        cy.get('#password').type(password);
+        cy.get('#kt_login_signin_submit').click();
+        //
+        cy.get('.swal2-confirm').click();
+    });
+});

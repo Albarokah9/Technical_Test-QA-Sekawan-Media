@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:run": "npx cypress run",
+    "cy:open": "npx cypress open",
     "allure:generate": "npx allure generate --clean allure-results -o allure-report",
-    "allure:open": "npx allure open"
+    "allure:open": "npx allure open",
+    "test:allure": "npm run test:run && npm run allure:generate && npm run allure:open"
   },
   "repository": {
     "type": "git",

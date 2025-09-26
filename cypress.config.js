@@ -6,7 +6,7 @@ module.exports = defineConfig({
   e2e: {
     // 1. Set the PRIMARY reporter to the multi-reporter utility
     reporter: 'cypress-multi-reporters',
-    
+    experimentalStudio: true,
     // 2. Point the reporter to the config file for reporter options
     reporterOptions: {
       configFile: 'reporter-config.json',
@@ -17,5 +17,6 @@ module.exports = defineConfig({
       allureWriter(on, config);
       return config;
     },
+    baseUrl: 'https://aps-rejanglebong.skwn.dev/dev',
   },
 });
