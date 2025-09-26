@@ -1,0 +1,30 @@
+{
+  "name": "technical_test-qa-sekawan-media",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:run": "npx cypress run",
+    "allure:generate": "npx allure generate --clean allure-results -o allure-report",
+    "allure:open": "npx allure open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Albarokah9/Technical_Test-QA-Sekawan-Media.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Albarokah9/Technical_Test-QA-Sekawan-Media/issues"
+  },
+  "homepage": "https://github.com/Albarokah9/Technical_Test-QA-Sekawan-Media#readme",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "allure-commandline": "^2.34.1",
+    "cypress": "^15.3.0",
+    "cypress-multi-reporters": "^2.0.5"
+  }
+}
