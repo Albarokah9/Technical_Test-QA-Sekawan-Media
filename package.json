@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:run": "npx cypress run",
     "cy:open": "npx cypress open",
@@ -27,6 +29,7 @@
     "@shelex/cypress-allure-plugin": "^2.41.2",
     "allure-commandline": "^2.34.1",
     "cypress": "^15.3.0",
-    "cypress-multi-reporters": "^2.0.5"
+    "cypress-multi-reporters": "^2.0.5",
+    "prettier": "^3.6.2"
   }
 }

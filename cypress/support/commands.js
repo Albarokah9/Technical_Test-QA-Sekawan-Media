@@ -33,7 +33,16 @@ Cypress.Commands.add('Login', () => {
         cy.get('#username').type(username);
         cy.get('#password').type(password);
         cy.get('#kt_login_signin_submit').click();
+        cy.get('#kt_quick_user_toggle')
+  .should('contain.text', 'Selamat Datang,')
+  .and('contain.text', 'Candidate');
+
+        cy.contains('span.menu-text', /^Pemilih Tetap$/) // hanya span yg teksnya persis ini
+  .should('be.visible')
+  .and('have.text', 'Pemilih Tetap').click();
+
+
         //
-        cy.get('.swal2-confirm').click();
+    //  cy.get('.swal2-confirm').click();
     });
 });
