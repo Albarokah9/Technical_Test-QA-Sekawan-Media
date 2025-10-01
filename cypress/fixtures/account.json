@@ -1,7 +1,6 @@
 {
-  "account":{
-    "username": "candidat",
-    "password": "password123"
-  }
+    "account": {
+        "username": "candidat",
+        "password": "password123"
+    }
 }
-  

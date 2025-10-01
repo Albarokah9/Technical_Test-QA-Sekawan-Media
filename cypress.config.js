@@ -1,26 +1,26 @@
 // cypress.config.js
-const allureWriter = require('@shelex/cypress-allure-plugin/writer'); 
-const { defineConfig } = require("cypress");
+const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
-  e2e: {
-    // 1. Set the PRIMARY reporter to the multi-reporter utility
-    reporter: 'cypress-multi-reporters',
-    experimentalStudio: true,
-    // 2. Point the reporter to the config file for reporter options
-    reporterOptions: {
-      configFile: 'reporter-config.json',
+    e2e: {
+        // 1. Set the PRIMARY reporter to the multi-reporter utility
+        reporter: 'cypress-multi-reporters',
+        experimentalStudio: true,
+        // 2. Point the reporter to the config file for reporter options
+        reporterOptions: {
+            configFile: 'reporter-config.json',
+        },
+
+        setupNodeEvents(on, config) {
+            // 3. This runs in the Node context and handles result writing
+            allureWriter(on, config);
+            return config;
+        },
+        baseUrl: 'https://aps-rejanglebong.skwn.dev/dev',
+        video: true,
+        screenshotOnRunFailure: true,
+        screenshotsFolder: 'cypress/screenshots',
+        videosFolder: 'cypress/videos',
     },
-    
-    setupNodeEvents(on, config) {
-      // 3. This runs in the Node context and handles result writing
-      allureWriter(on, config);
-      return config;
-    },
-    baseUrl: 'https://aps-rejanglebong.skwn.dev/dev',
-    video: true,
-    screenshotOnRunFailure: true,
-    screenshotsFolder: 'cypress/screenshots', 
-    videosFolder: 'cypress/videos'
-  },
 });

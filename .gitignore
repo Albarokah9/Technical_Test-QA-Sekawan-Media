@@ -3,3 +3,4 @@ allure-results/
 allure-report/
 cypress/videos/
 cypress/screenshots/
+cypress/e2e/smokeTest.cy.js/
