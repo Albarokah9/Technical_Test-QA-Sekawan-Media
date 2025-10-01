@@ -1,8 +1,7 @@
-
 {
-  "reporterEnabled": "spec, @shelex/cypress-allure-plugin",
-  "cypressAllureReporterOptions": {
-    "resultsDir": "allure-results",
-    "overwrite": true
-  }
+    "reporterEnabled": "spec, @shelex/cypress-allure-plugin",
+    "cypressAllureReporterOptions": {
+        "resultsDir": "allure-results",
+        "overwrite": true
+    }
 }
