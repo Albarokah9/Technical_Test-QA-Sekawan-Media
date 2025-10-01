@@ -35,7 +35,7 @@ describe('Penambahan Data Pemilih', () => {
     });
 });
 
-it.only('TC-PD-002 - Memverifikasi validasi minimum length pada No. KK dan No. NIK.', () => {
+it('TC-PD-002 - Memverifikasi validasi minimum length pada No. KK dan No. NIK.', () => {
     cy.get('@dataKKNIK').then(({ invalid }) => {
             const { noKK, noNIK } = invalid;
         PenambahanPage.klikButtonTambah()
