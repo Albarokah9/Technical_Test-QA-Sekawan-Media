@@ -1,7 +1,7 @@
 {
-    "reporterEnabled": "spec, @shelex/cypress-allure-plugin",
-    "cypressAllureReporterOptions": {
-        "resultsDir": "allure-results",
-        "overwrite": true
-    }
+  "reporterEnabled": "spec, mocha-junit-reporter",
+  "mochaJunitReporterReporterOptions": {
+    "mochaFile": "results/junit/junit-[hash].xml",
+    "toConsole": false
+  }
 }
