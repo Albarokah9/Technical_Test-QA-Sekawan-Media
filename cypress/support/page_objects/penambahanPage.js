@@ -25,12 +25,17 @@ const SELECTORS = {
     resultTPS: '.select2-results__options',
     errorNoKK : '#error_kk',
     errorNoNIK: '#error_nik',
+    loadingOverlay: 'div.blockUI.blockOverlay'
 
 };
 
 class PenambahanPage {
     klikButtonTambah() {
+        // cy.get(SELECTORS.buttonTambah).click();
+        // return this;
+        this.waitForLoadingToFinish(); 
         cy.get(SELECTORS.buttonTambah).click();
+        this.waitForLoadingToFinish(); 
         return this;
     }
     assertFormInputPemilih() {
@@ -38,7 +43,10 @@ class PenambahanPage {
         return this;
     }
     klikButtonSimpan() {
+        // cy.get(SELECTORS.buttonSimpan).click();
+        this.waitForLoadingToFinish();
         cy.get(SELECTORS.buttonSimpan).click();
+        this.waitForLoadingToFinish()
     }
     inputNoKK(noKK) {
     cy.get(SELECTORS.fieldNoKK).clear().type(noKK);
@@ -134,7 +142,12 @@ class PenambahanPage {
         .and('contain.text', 'Jumlah karakter NIK')
         .and('contain.text', '16 karakter');
         return this;
-}
+    }
+    waitForLoadingToFinish() {
+        cy.get(SELECTORS.loadingOverlay, { timeout: 15000 }) 
+          .should('not.exist');
+        return this;
+    }
 
 
 

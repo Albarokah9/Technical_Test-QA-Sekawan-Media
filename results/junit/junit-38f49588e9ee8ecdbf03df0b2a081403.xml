@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="23.494" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-10-01T05:44:01" tests="0" file="cypress\e2e\penambahanData.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Penambahan Data Pemilih" timestamp="2025-10-01T05:44:01" tests="2" time="23.468" failures="0">
+    <testcase name="Penambahan Data Pemilih TC-PD-001 - Penambahan Data Pemilih Baru dengan Input Data Lengkap" time="15.218" classname="TC-PD-001 - Penambahan Data Pemilih Baru dengan Input Data Lengkap">
+    </testcase>
+    <testcase name="Penambahan Data Pemilih TC-PD-002 - Memverifikasi validasi minimum length pada No. KK dan No. NIK." time="8.127" classname="TC-PD-002 - Memverifikasi validasi minimum length pada No. KK dan No. NIK.">
+    </testcase>
+  </testsuite>
+</testsuites>

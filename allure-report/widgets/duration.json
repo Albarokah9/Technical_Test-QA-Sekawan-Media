@@ -1,1 +1,1 @@
-[]
+[{"uid":"e57a4fb722f73cb0","name":"TC-PD-002 - Memverifikasi validasi minimum length pada No. KK dan No. NIK.","time":{"start":1759297456364,"stop":1759297464498,"duration":8134},"status":"passed","severity":"normal"},{"uid":"475868bb114a55d2","name":"TC-PD-001 - Penambahan Data Pemilih Baru dengan Input Data Lengkap","time":{"start":1759297441100,"stop":1759297456290,"duration":15190},"status":"passed","severity":"normal"}]
